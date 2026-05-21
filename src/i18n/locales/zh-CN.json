@@ -1,0 +1,398 @@
+{
+  "locale": {
+    "en": "English",
+    "zhCN": "简体中文"
+  },
+  "brand": {
+    "name": "Orange Neptune"
+  },
+  "meta": {
+    "default": {
+      "title": "Orange Neptune — 美国电商增长合作伙伴",
+      "description": "助力品牌在亚马逊、沃尔玛与新兴渠道规模化增长。更聪明的流量，可扩展的增长。",
+      "ogTitle": "Orange Neptune — 美国电商增长合作伙伴",
+      "ogDescription": "面向美国电商的情报与增长平台。"
+    },
+    "home": {
+      "title": "Orange Neptune — 美国电商增长合作伙伴",
+      "description": "助力品牌在亚马逊、沃尔玛与新兴渠道规模化增长。更聪明的流量，可扩展的增长。",
+      "ogTitle": "Orange Neptune — 美国电商增长合作伙伴",
+      "ogDescription": "面向美国电商的情报与增长平台。"
+    },
+    "capabilities": {
+      "title": "能力 — Orange Neptune",
+      "description": "结构性理解电商增长：消费者定位、亚马逊与沃尔玛广告、社会化电商、付费媒体与履约。",
+      "ogTitle": "能力 — Orange Neptune",
+      "ogDescription": "覆盖定位、广告与履约的结构性电商能力。"
+    },
+    "traffic": {
+      "title": "流量 — Orange Neptune",
+      "description": "可扩展流量的四大模块：消费者情报、产品定位、流量获取与 AI 驱动广告。",
+      "ogTitle": "流量 — Orange Neptune",
+      "ogDescription": "可扩展流量的模块化框架。"
+    },
+    "results": {
+      "title": "成果 — Orange Neptune",
+      "description": "品牌如何突破 ROAS 瓶颈、为美国消费者重新定位、从 OEM 转向消费者驱动增长，并本地化达人内容。",
+      "ogTitle": "成果 — Orange Neptune",
+      "ogDescription": "结构性电商增长带来的真实成果。"
+    },
+    "insights": {
+      "title": "洞察 — Orange Neptune",
+      "description": "关于美国定位、流量与转化质量、2026 沃尔玛增长、本地化与消费者认知的电商情报。",
+      "ogTitle": "洞察 — Orange Neptune",
+      "ogDescription": "专业方法发布的电商情报。"
+    },
+    "company": {
+      "title": "公司 — Orange Neptune",
+      "description": "了解我们的起点、认识团队、阅读原则，并探讨增长机会。",
+      "ogTitle": "公司 — Orange Neptune",
+      "ogDescription": "Orange Neptune 背后的团队与原则。"
+    }
+  },
+  "header": {
+    "scheduleConsultation": "预约咨询",
+    "explore": "探索{{label}} →",
+    "selectLanguage": "选择语言",
+    "openMenu": "打开菜单",
+    "closeMenu": "关闭菜单",
+    "closeMenuOverlay": "关闭菜单遮罩"
+  },
+  "nav": {
+    "capabilities": {
+      "label": "能力",
+      "intro": "我们用于复利式提升电商增长的专业能力体系。",
+      "items": {
+        "consumerPositioning": {
+          "label": "消费者定位",
+          "desc": "将品牌意图转化为美国消费者的购物行为。"
+        },
+        "amazonAdvertising": {
+          "label": "亚马逊广告",
+          "desc": "从关键词架构到 DSP，围绕商品目录动态构建。"
+        },
+        "walmartAdvertising": {
+          "label": "沃尔玛广告",
+          "desc": "与平台增长曲线对齐的 Walmart Connect 策略。"
+        },
+        "influencerSocialCommerce": {
+          "label": "达人与社会化电商",
+          "desc": "覆盖 TikTok Shop、Instagram、YouTube 的达人驱动需求。"
+        },
+        "googleMetaAds": {
+          "label": "Google 与 Meta 广告",
+          "desc": "强化站内表现的站外流量，而非相反。"
+        },
+        "fulfillmentEfficiency": {
+          "label": "履约与效率",
+          "desc": "FBA、WFS 与 3PL 策略，支撑可持续的单位经济。"
+        }
+      }
+    },
+    "traffic": {
+      "label": "流量",
+      "intro": "复利式积累高质量电商需求的框架。",
+      "items": {
+        "demandMapping": {
+          "label": "需求图谱",
+          "desc": "洞察意图真实分布的渠道与触点。"
+        },
+        "channelOrchestration": {
+          "label": "渠道协同",
+          "desc": "付费、自然与达人媒体的节奏编排。"
+        },
+        "marketplaceConversion": {
+          "label": "站内转化",
+          "desc": "把访问转化为品类份额。"
+        },
+        "compoundingLoops": {
+          "label": "复利循环",
+          "desc": "可防御、可扩展的再投资策略。"
+        }
+      }
+    },
+    "results": {
+      "label": "成果",
+      "intro": "品牌在我们增长框架下取得的成果。",
+      "items": {
+        "roasPrograms": {
+          "label": "ROAS 项目",
+          "desc": "成熟与新兴商品目录的效率曲线。"
+        },
+        "localization": {
+          "label": "本地化",
+          "desc": "进入美国电商市场的品牌路径。"
+        },
+        "categoryLeadership": {
+          "label": "品类领先",
+          "desc": "迈向品类头部份额的路径。"
+        },
+        "operationalScale": {
+          "label": "运营规模",
+          "desc": "规模增长下的利润纪律。"
+        },
+        "newMarketEntry": {
+          "label": "新平台进入",
+          "desc": "新平台前 90 天作战手册。"
+        }
+      }
+    },
+    "insights": {
+      "label": "洞察",
+      "intro": "以专业方法发布的电商情报。",
+      "items": {
+        "marketplaceReports": {
+          "label": "电商报告",
+          "desc": "季度品类与平台拆解。"
+        },
+        "playbooks": {
+          "label": "作战手册",
+          "desc": "电商团队的运营模型。"
+        },
+        "briefings": {
+          "label": "简报",
+          "desc": "本周市场动向短评。"
+        },
+        "frameworks": {
+          "label": "框架",
+          "desc": "增长方法背后的模型。"
+        }
+      }
+    },
+    "company": {
+      "label": "公司",
+      "intro": "Orange Neptune 背后的团队与原则。",
+      "items": {
+        "about": {
+          "label": "Orange Neptune",
+          "desc": "了解我们的起点。"
+        },
+        "team": {
+          "label": "团队",
+          "desc": "Orange Neptune 背后的团队。"
+        },
+        "principles": {
+          "label": "原则",
+          "desc": "我们的理念与哲学。"
+        },
+        "contact": {
+          "label": "联系",
+          "desc": "与团队探讨增长机会。"
+        }
+      }
+    }
+  },
+  "footer": {
+    "tagline": "您在美国本土的电商增长伙伴。更聪明的流量，可扩展的增长。",
+    "capabilities": "能力",
+    "explore": "探索",
+    "company": "公司",
+    "links": {
+      "consumerPositioning": "消费者定位",
+      "amazonAdvertising": "亚马逊广告",
+      "walmartAdvertising": "沃尔玛广告",
+      "fulfillmentSolutions": "履约解决方案",
+      "traffic": "流量",
+      "results": "成果",
+      "insights": "洞察",
+      "about": "关于",
+      "team": "团队",
+      "principles": "原则",
+      "contact": "联系"
+    },
+    "copyright": "© {{year}} Orange Neptune. 保留所有权利。",
+    "badge": "美国本土 · 电商情报"
+  },
+  "home": {
+    "hero": {
+      "badge": "您在美国本土的电商增长伙伴",
+      "titleLine1": "助力品牌在美国",
+      "titleLine2": "亚马逊、沃尔玛与新兴渠道规模化增长",
+      "subtitle": "更聪明的流量，可扩展的增长。",
+      "ctaInsights": "探索电商洞察",
+      "ctaConsultation": "预约咨询"
+    },
+    "capabilities": {
+      "eyebrow": "能力",
+      "title": "结构性理解电商增长",
+      "description": "我们帮助品牌在全栈电商体系中增长——从消费者定位到广告投放与履约。",
+      "learnMore": "了解更多",
+      "items": {
+        "consumerPositioning": "消费者定位",
+        "amazonAdvertising": "亚马逊广告",
+        "walmartAdvertising": "沃尔玛广告",
+        "influencerSocialCommerce": "达人与社会化电商",
+        "googleMetaAds": "Google 与 Meta 广告",
+        "fulfillmentEfficiency": "履约解决方案与效率"
+      }
+    },
+    "traffic": {
+      "eyebrow": "流量",
+      "title": "可扩展流量的四大基石",
+      "explore": "探索流量框架",
+      "blocks": {
+        "01": { "title": "了解消费者", "subtitle": "消费者情报" },
+        "02": { "title": "定制产品", "subtitle": "产品定位" },
+        "03": { "title": "精准触达受众", "subtitle": "流量获取" },
+        "04": { "title": "提升效率", "subtitle": "AI 驱动广告" }
+      }
+    },
+    "results": {
+      "eyebrow": "成果",
+      "title": "增长如何真正发生",
+      "seeAll": "查看全部成果",
+      "caseStudy": "案例研究",
+      "items": {
+        "roas": "如何突破 ROAS 瓶颈",
+        "reposition": "如何为美国消费者重新定位产品",
+        "oem": "OEM 厂商如何转向消费者驱动增长",
+        "creator": "如何为美国受众本地化达人内容",
+        "data": "将电商数据转化为增长机会"
+      }
+    },
+    "insights": {
+      "eyebrow": "洞察",
+      "title": "电商情报出版物",
+      "article": "文章",
+      "items": {
+        "positioning": "为何许多品牌在美国电商定位上举步维艰",
+        "trafficQuality": "流量增长与转化质量的区别",
+        "walmart": "2026 年沃尔玛电商增长需要什么",
+        "localization": "电商本地化远不止翻译",
+        "perception": "理解美国消费者认知"
+      }
+    },
+    "cta": {
+      "title": "与团队探讨增长机会。",
+      "description": "冷静、战略、自信。我们与准备好结构性思考电商增长的品牌合作。",
+      "schedule": "预约咨询",
+      "explore": "探索洞察"
+    }
+  },
+  "pages": {
+    "capabilities": {
+      "heroEyebrow": "能力",
+      "heroTitle": "结构性理解电商增长。",
+      "heroSubtitle": "我们帮助品牌在亚马逊、沃尔玛与新兴渠道实现复利式增长的专业能力。",
+      "items": {
+        "consumerPositioning": {
+          "title": "消费者定位",
+          "desc": "将品牌意图转化为美国电商消费者的语言、预期与行为。"
+        },
+        "amazonAdvertising": {
+          "title": "亚马逊广告",
+          "desc": "从关键词架构到 DSP，围绕商品目录与品类动态构建广告体系。"
+        },
+        "walmartAdvertising": {
+          "title": "沃尔玛广告",
+          "desc": "与平台独特购物者与增长曲线对齐的 Walmart Connect 策略。"
+        },
+        "influencerSocialCommerce": {
+          "title": "达人与社会化电商",
+          "desc": "为美国受众打造，覆盖 TikTok Shop、Instagram 与 YouTube 的达人驱动需求。"
+        },
+        "googleMetaAds": {
+          "title": "Google 与 Meta 广告",
+          "desc": "强化站内表现的站外流量——而非相反。"
+        },
+        "fulfillmentEfficiency": {
+          "title": "履约解决方案与效率",
+          "desc": "为可持续单位经济设计的 FBA、WFS 与 3PL 策略。"
+        }
+      }
+    },
+    "traffic": {
+      "heroEyebrow": "流量",
+      "heroTitle": "可扩展流量的模块化框架。",
+      "heroSubtitle": "四大模块协同运作——单独强大，组合更强。",
+      "blocks": {
+        "01": {
+          "heading": "了解消费者",
+          "title": "消费者情报",
+          "desc": "将行为、搜索与评论数据整合为美国消费者决策的单一视图。"
+        },
+        "02": {
+          "heading": "定制产品",
+          "title": "产品定位",
+          "desc": "listing、视觉与 PDP 架构对齐消费者信号——而非内部品牌假设。"
+        },
+        "03": {
+          "heading": "精准触达受众",
+          "title": "流量获取",
+          "desc": "围绕消费者旅程规划站内站外媒体，尊重归因现实的衡量方式。"
+        },
+        "04": {
+          "heading": "提升效率",
+          "title": "AI 驱动广告",
+          "desc": "出价、预算与创意自动化，复利积累学习而非每周重置。"
+        }
+      }
+    },
+    "results": {
+      "heroEyebrow": "成果",
+      "heroTitle": "增长如何真正发生。",
+      "heroSubtitle": "我们在各品类中反复看到的模式——以及解锁增长的结构化动作。",
+      "caseLabel": "案例 {{num}}",
+      "cardDesc": "阅读框架、诊断过程，以及产生成果的关键动作。",
+      "items": {
+        "roas": "如何突破 ROAS 瓶颈",
+        "reposition": "如何为美国消费者重新定位产品",
+        "oem": "OEM 厂商如何转向消费者驱动增长",
+        "creator": "如何为美国受众本地化达人内容",
+        "data": "将电商数据转化为增长机会"
+      }
+    },
+    "insights": {
+      "heroEyebrow": "洞察",
+      "heroTitle": "以专业方法发布的电商情报。",
+      "heroSubtitle": "关于决定电商增长能否复利的关键结构性问题的深度思考。",
+      "article": "文章",
+      "items": {
+        "positioning": {
+          "title": "为何许多品牌在美国电商定位上举步维艰",
+          "desc": "多数定位失败不是语言问题——而是品类框架问题。"
+        },
+        "trafficQuality": {
+          "title": "流量增长与转化质量的区别",
+          "desc": "没有转化质量的流量增长，是资产负债表上的负债。"
+        },
+        "walmart": {
+          "title": "2026 年沃尔玛电商增长需要什么",
+          "desc": "2026 年的沃尔玛，不是 2016 年的亚马逊。"
+        },
+        "localization": {
+          "title": "电商本地化远不止翻译",
+          "desc": "本地化是对预期的协商，而非文字的替换。"
+        },
+        "perception": {
+          "title": "理解美国消费者认知",
+          "desc": "认知是操作系统——定价、主张与创意都运行其上。"
+        }
+      }
+    },
+    "company": {
+      "heroEyebrow": "公司",
+      "heroTitle": "冷静、战略型的合作伙伴——刻意为之。",
+      "heroSubtitle": "我们是美国本土的电商增长团队。低调做人，认真做事。",
+      "blocks": {
+        "about": { "title": "Orange Neptune", "desc": "了解我们的起点。" },
+        "team": { "title": "团队", "desc": "Orange Neptune 背后的团队。" },
+        "principles": { "title": "原则", "desc": "我们的理念与哲学。" },
+        "contact": { "title": "联系", "desc": "与团队探讨增长机会。" }
+      }
+    }
+  },
+  "errors": {
+    "notFound": {
+      "title": "页面未找到",
+      "description": "您访问的页面不存在或已被移动。",
+      "goHome": "返回首页"
+    },
+    "load": {
+      "title": "页面加载失败",
+      "description": "我们这边出了点问题。您可以刷新页面或返回首页。",
+      "tryAgain": "重试",
+      "goHome": "返回首页"
+    }
+  }
+}

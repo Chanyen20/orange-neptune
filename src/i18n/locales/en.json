@@ -1,0 +1,398 @@
+{
+  "locale": {
+    "en": "English",
+    "zhCN": "简体中文"
+  },
+  "brand": {
+    "name": "Orange Neptune"
+  },
+  "meta": {
+    "default": {
+      "title": "Orange Neptune — U.S. Marketplace Growth Partner",
+      "description": "Helping brands scale across Amazon, Walmart & emerging commerce channels. Smarter traffic, scalable growth.",
+      "ogTitle": "Orange Neptune — U.S. Marketplace Growth Partner",
+      "ogDescription": "Marketplace intelligence and growth platform for U.S. commerce."
+    },
+    "home": {
+      "title": "Orange Neptune — U.S. Marketplace Growth Partner",
+      "description": "Helping brands scale across Amazon, Walmart & emerging commerce channels. Smarter traffic, scalable growth.",
+      "ogTitle": "Orange Neptune — U.S. Marketplace Growth Partner",
+      "ogDescription": "Marketplace intelligence and growth platform for U.S. commerce."
+    },
+    "capabilities": {
+      "title": "Capabilities — Orange Neptune",
+      "description": "We understand marketplace growth structurally. Consumer positioning, advertising across Amazon and Walmart, social commerce, paid media, and fulfillment.",
+      "ogTitle": "Capabilities — Orange Neptune",
+      "ogDescription": "Structural marketplace capabilities across positioning, advertising, and fulfillment."
+    },
+    "traffic": {
+      "title": "Traffic — Orange Neptune",
+      "description": "Four modular blocks for scalable marketplace traffic: consumer intelligence, product positioning, traffic acquisition, and AI-powered ads.",
+      "ogTitle": "Traffic — Orange Neptune",
+      "ogDescription": "A modular framework for scalable marketplace traffic."
+    },
+    "results": {
+      "title": "Results — Orange Neptune",
+      "description": "How brands overcome ROAS bottlenecks, reposition for U.S. consumers, transition from OEM to consumer-led growth, and localize creator content.",
+      "ogTitle": "Results — Orange Neptune",
+      "ogDescription": "Real outcomes from structural marketplace growth."
+    },
+    "insights": {
+      "title": "Insights — Orange Neptune",
+      "description": "Marketplace intelligence on U.S. positioning, traffic vs. conversion quality, Walmart growth in 2026, localization, and consumer perception.",
+      "ogTitle": "Insights — Orange Neptune",
+      "ogDescription": "A marketplace intelligence publication."
+    },
+    "company": {
+      "title": "Company — Orange Neptune",
+      "description": "Learn how we started, meet the team, read our principles, and discuss growth opportunities.",
+      "ogTitle": "Company — Orange Neptune",
+      "ogDescription": "The team and principles behind Orange Neptune."
+    }
+  },
+  "header": {
+    "scheduleConsultation": "Schedule a Consultation",
+    "explore": "Explore {{label}} →",
+    "selectLanguage": "Select language",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "closeMenuOverlay": "Close menu overlay"
+  },
+  "nav": {
+    "capabilities": {
+      "label": "Capabilities",
+      "intro": "The disciplines we use to compound marketplace growth.",
+      "items": {
+        "consumerPositioning": {
+          "label": "Consumer Positioning",
+          "desc": "Translate brand intent into U.S. shopper behavior."
+        },
+        "amazonAdvertising": {
+          "label": "Amazon Advertising",
+          "desc": "Keyword architecture to DSP, built around catalog dynamics."
+        },
+        "walmartAdvertising": {
+          "label": "Walmart Advertising",
+          "desc": "Walmart Connect strategy aligned to the platform's curve."
+        },
+        "influencerSocialCommerce": {
+          "label": "Influencer & Social Commerce",
+          "desc": "Creator-led demand across TikTok Shop, Instagram, YouTube."
+        },
+        "googleMetaAds": {
+          "label": "Google & Meta Ads",
+          "desc": "Off-marketplace traffic that compounds on-marketplace results."
+        },
+        "fulfillmentEfficiency": {
+          "label": "Fulfillment & Efficiency",
+          "desc": "FBA, WFS, and 3PL strategy for durable unit economics."
+        }
+      }
+    },
+    "traffic": {
+      "label": "Traffic",
+      "intro": "A framework for compounding qualified marketplace demand.",
+      "items": {
+        "demandMapping": {
+          "label": "Demand Mapping",
+          "desc": "Where intent actually lives across channels."
+        },
+        "channelOrchestration": {
+          "label": "Channel Orchestration",
+          "desc": "Sequencing paid, organic, and creator media."
+        },
+        "marketplaceConversion": {
+          "label": "Marketplace Conversion",
+          "desc": "Turning sessions into share of category."
+        },
+        "compoundingLoops": {
+          "label": "Compounding Loops",
+          "desc": "Reinvestment patterns that scale defensibly."
+        }
+      }
+    },
+    "results": {
+      "label": "Results",
+      "intro": "Outcomes brands have achieved with our growth framework.",
+      "items": {
+        "roasPrograms": {
+          "label": "ROAS Programs",
+          "desc": "Efficiency curves across mature and emerging catalogs."
+        },
+        "localization": {
+          "label": "Localization",
+          "desc": "Brands entering the U.S. marketplace landscape."
+        },
+        "categoryLeadership": {
+          "label": "Category Leadership",
+          "desc": "Path to top-of-category share."
+        },
+        "operationalScale": {
+          "label": "Operational Scale",
+          "desc": "Margin discipline as volume grows."
+        },
+        "newMarketEntry": {
+          "label": "New Market Entry",
+          "desc": "First-90-day playbooks for new platforms."
+        }
+      }
+    },
+    "insights": {
+      "label": "Insights",
+      "intro": "Marketplace intelligence, published as a discipline.",
+      "items": {
+        "marketplaceReports": {
+          "label": "Marketplace Reports",
+          "desc": "Quarterly category and platform breakdowns."
+        },
+        "playbooks": {
+          "label": "Playbooks",
+          "desc": "Operating models for marketplace teams."
+        },
+        "briefings": {
+          "label": "Briefings",
+          "desc": "Short notes on what moved this week."
+        },
+        "frameworks": {
+          "label": "Frameworks",
+          "desc": "The models behind our growth approach."
+        }
+      }
+    },
+    "company": {
+      "label": "Company",
+      "intro": "The team and principles behind Orange Neptune.",
+      "items": {
+        "about": {
+          "label": "Orange Neptune",
+          "desc": "Learn how we started."
+        },
+        "team": {
+          "label": "Team",
+          "desc": "The team behind Orange Neptune."
+        },
+        "principles": {
+          "label": "Principles",
+          "desc": "Our philosophies."
+        },
+        "contact": {
+          "label": "Contact",
+          "desc": "Discuss growth opportunities with our team."
+        }
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Your U.S.-based marketplace growth partner. Smarter traffic, scalable growth.",
+    "capabilities": "Capabilities",
+    "explore": "Explore",
+    "company": "Company",
+    "links": {
+      "consumerPositioning": "Consumer Positioning",
+      "amazonAdvertising": "Amazon Advertising",
+      "walmartAdvertising": "Walmart Advertising",
+      "fulfillmentSolutions": "Fulfillment Solutions",
+      "traffic": "Traffic",
+      "results": "Results",
+      "insights": "Insights",
+      "about": "About",
+      "team": "Team",
+      "principles": "Principles",
+      "contact": "Contact"
+    },
+    "copyright": "© {{year}} Orange Neptune. All rights reserved.",
+    "badge": "U.S.-Based · Marketplace Intelligence"
+  },
+  "home": {
+    "hero": {
+      "badge": "Your U.S.-Based Marketplace Growth Partner",
+      "titleLine1": "Helping Brands Scale Across",
+      "titleLine2": "Amazon, Walmart & Emerging Commerce Channels",
+      "subtitle": "Smarter Traffic, Scalable Growth.",
+      "ctaInsights": "Explore Marketplace Insights",
+      "ctaConsultation": "Schedule a Consultation"
+    },
+    "capabilities": {
+      "eyebrow": "Capabilities",
+      "title": "A structural understanding of marketplace growth",
+      "description": "We help brands grow across the full marketplace stack — from consumer positioning to advertising and fulfillment.",
+      "learnMore": "Learn more",
+      "items": {
+        "consumerPositioning": "Consumer Positioning",
+        "amazonAdvertising": "Amazon Advertising",
+        "walmartAdvertising": "Walmart Advertising",
+        "influencerSocialCommerce": "Influencer & Social Commerce",
+        "googleMetaAds": "Google Ads & Meta Ads",
+        "fulfillmentEfficiency": "Fulfillment Solutions and Efficiency"
+      }
+    },
+    "traffic": {
+      "eyebrow": "Traffic",
+      "title": "Four building blocks of scalable traffic",
+      "explore": "Explore the traffic framework",
+      "blocks": {
+        "01": { "title": "Know Your Consumers", "subtitle": "Consumer Intelligence" },
+        "02": { "title": "Customize Product", "subtitle": "Product Positioning" },
+        "03": { "title": "Target Right Audience", "subtitle": "Traffic Acquisition" },
+        "04": { "title": "Improve Efficiency", "subtitle": "AI-Powered Ads" }
+      }
+    },
+    "results": {
+      "eyebrow": "Results",
+      "title": "How growth actually happens",
+      "seeAll": "See all results",
+      "caseStudy": "CASE STUDY",
+      "items": {
+        "roas": "How to overcome ROAS bottlenecks",
+        "reposition": "How to Reposition Products for U.S. Consumers",
+        "oem": "How OEM Manufacturers Transition Toward Consumer-Led Growth",
+        "creator": "How to Localize Creator Content for U.S. Audiences",
+        "data": "Turning Marketplace Data Into Growth Opportunities"
+      }
+    },
+    "insights": {
+      "eyebrow": "Insights",
+      "title": "A marketplace intelligence publication",
+      "article": "ARTICLE",
+      "items": {
+        "positioning": "Why Many Brands Struggle With U.S. Marketplace Positioning",
+        "trafficQuality": "The Difference Between Traffic Growth and Conversion Quality",
+        "walmart": "What Walmart Marketplace Growth Requires in 2026",
+        "localization": "Why Marketplace Localization Is More Than Translation",
+        "perception": "Understanding U.S. Consumer Perception"
+      }
+    },
+    "cta": {
+      "title": "Discuss growth opportunities with our team.",
+      "description": "Calm, strategic, confident. We work with brands ready to think about marketplace growth structurally.",
+      "schedule": "Schedule a Consultation",
+      "explore": "Explore Insights"
+    }
+  },
+  "pages": {
+    "capabilities": {
+      "heroEyebrow": "Capabilities",
+      "heroTitle": "Marketplace growth, understood structurally.",
+      "heroSubtitle": "The disciplines we use to help brands compound across Amazon, Walmart, and emerging commerce channels.",
+      "items": {
+        "consumerPositioning": {
+          "title": "Consumer Positioning",
+          "desc": "Translate brand intent into the language, expectations, and behavior of U.S. marketplace shoppers."
+        },
+        "amazonAdvertising": {
+          "title": "Amazon Advertising",
+          "desc": "From keyword architecture to DSP, advertising structured around catalog and category dynamics."
+        },
+        "walmartAdvertising": {
+          "title": "Walmart Advertising",
+          "desc": "Walmart Connect strategy aligned with the platform's distinctive shopper and growth curve."
+        },
+        "influencerSocialCommerce": {
+          "title": "Influencer & Social Commerce",
+          "desc": "Creator-led demand engineered for U.S. audiences across TikTok Shop, Instagram, and YouTube."
+        },
+        "googleMetaAds": {
+          "title": "Google Ads & Meta Ads",
+          "desc": "Off-marketplace traffic that compounds marketplace performance — not the other way around."
+        },
+        "fulfillmentEfficiency": {
+          "title": "Fulfillment Solutions and Efficiency",
+          "desc": "FBA, WFS, and 3PL strategy designed for unit economics that hold up at scale."
+        }
+      }
+    },
+    "traffic": {
+      "heroEyebrow": "Traffic",
+      "heroTitle": "A modular framework for scalable traffic.",
+      "heroSubtitle": "Four blocks that work together — each strong on its own, stronger as a system.",
+      "blocks": {
+        "01": {
+          "heading": "Know Your Consumers",
+          "title": "Consumer Intelligence",
+          "desc": "Behavioral, search, and review data assembled into a single view of how U.S. shoppers actually decide."
+        },
+        "02": {
+          "heading": "Customize Product",
+          "title": "Product Positioning",
+          "desc": "Listings, imagery, and PDP architecture aligned to the consumer signals — not internal brand assumptions."
+        },
+        "03": {
+          "heading": "Target Right Audience",
+          "title": "Traffic Acquisition",
+          "desc": "On- and off-marketplace media planned around the consumer journey, with measurement that respects attribution reality."
+        },
+        "04": {
+          "heading": "Improve Efficiency",
+          "title": "AI-Powered Ads",
+          "desc": "Bid, budget, and creative automation that compounds learnings instead of resetting them weekly."
+        }
+      }
+    },
+    "results": {
+      "heroEyebrow": "Results",
+      "heroTitle": "How growth actually happens.",
+      "heroSubtitle": "Patterns we have seen repeat across categories — and the structural moves that unlock them.",
+      "caseLabel": "CASE {{num}}",
+      "cardDesc": "Read the framework, the diagnostic, and the moves that produced the outcome.",
+      "items": {
+        "roas": "How to overcome ROAS bottlenecks",
+        "reposition": "How to Reposition Products for U.S. Consumers",
+        "oem": "How OEM Manufacturers Transition Toward Consumer-Led Growth",
+        "creator": "How to Localize Creator Content for U.S. Audiences",
+        "data": "Turning Marketplace Data Into Growth Opportunities"
+      }
+    },
+    "insights": {
+      "heroEyebrow": "Insights",
+      "heroTitle": "A marketplace intelligence publication.",
+      "heroSubtitle": "Long-form thinking on the structural questions that decide whether marketplace growth compounds.",
+      "article": "ARTICLE",
+      "items": {
+        "positioning": {
+          "title": "Why Many Brands Struggle With U.S. Marketplace Positioning",
+          "desc": "Most positioning failures aren't language — they're category framing."
+        },
+        "trafficQuality": {
+          "title": "The Difference Between Traffic Growth and Conversion Quality",
+          "desc": "Traffic growth without conversion quality is a balance-sheet liability."
+        },
+        "walmart": {
+          "title": "What Walmart Marketplace Growth Requires in 2026",
+          "desc": "The shape of Walmart in 2026 is not the shape of Amazon in 2016."
+        },
+        "localization": {
+          "title": "Why Marketplace Localization Is More Than Translation",
+          "desc": "Localization is the negotiation of expectation, not the substitution of words."
+        },
+        "perception": {
+          "title": "Understanding U.S. Consumer Perception",
+          "desc": "Perception is the operating system — pricing, claims, and creative all run on top of it."
+        }
+      }
+    },
+    "company": {
+      "heroEyebrow": "Company",
+      "heroTitle": "A calm, strategic partner — by design.",
+      "heroSubtitle": "We are a U.S.-based marketplace growth team. Quiet about ourselves, serious about the work.",
+      "blocks": {
+        "about": { "title": "Orange Neptune", "desc": "Learn how we started." },
+        "team": { "title": "Team", "desc": "The team behind Orange Neptune." },
+        "principles": { "title": "Principles", "desc": "Our philosophies." },
+        "contact": { "title": "Contact", "desc": "Discuss growth opportunities with our team." }
+      }
+    }
+  },
+  "errors": {
+    "notFound": {
+      "title": "Page not found",
+      "description": "The page you're looking for doesn't exist or has been moved.",
+      "goHome": "Go home"
+    },
+    "load": {
+      "title": "This page didn't load",
+      "description": "Something went wrong on our end. You can try refreshing or head back home.",
+      "tryAgain": "Try again",
+      "goHome": "Go home"
+    }
+  }
+}
