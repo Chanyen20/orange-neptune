@@ -10,7 +10,6 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TrafficRouteImport } from './routes/traffic'
-import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ResultsRouteImport } from './routes/results'
 import { Route as InsightsRouteImport } from './routes/insights'
 import { Route as CompanyRouteImport } from './routes/company'
@@ -20,11 +19,6 @@ import { Route as IndexRouteImport } from './routes/index'
 const TrafficRoute = TrafficRouteImport.update({
   id: '/traffic',
   path: '/traffic',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ResultsRoute = ResultsRouteImport.update({
@@ -59,7 +53,6 @@ export interface FileRoutesByFullPath {
   '/company': typeof CompanyRoute
   '/insights': typeof InsightsRoute
   '/results': typeof ResultsRoute
-  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/traffic': typeof TrafficRoute
 }
 export interface FileRoutesByTo {
@@ -68,7 +61,6 @@ export interface FileRoutesByTo {
   '/company': typeof CompanyRoute
   '/insights': typeof InsightsRoute
   '/results': typeof ResultsRoute
-  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/traffic': typeof TrafficRoute
 }
 export interface FileRoutesById {
@@ -78,7 +70,6 @@ export interface FileRoutesById {
   '/company': typeof CompanyRoute
   '/insights': typeof InsightsRoute
   '/results': typeof ResultsRoute
-  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/traffic': typeof TrafficRoute
 }
 export interface FileRouteTypes {
@@ -89,17 +80,9 @@ export interface FileRouteTypes {
     | '/company'
     | '/insights'
     | '/results'
-    | '/sitemap.xml'
     | '/traffic'
   fileRoutesByTo: FileRoutesByTo
-  to:
-    | '/'
-    | '/capabilities'
-    | '/company'
-    | '/insights'
-    | '/results'
-    | '/sitemap.xml'
-    | '/traffic'
+  to: '/' | '/capabilities' | '/company' | '/insights' | '/results' | '/traffic'
   id:
     | '__root__'
     | '/'
@@ -107,7 +90,6 @@ export interface FileRouteTypes {
     | '/company'
     | '/insights'
     | '/results'
-    | '/sitemap.xml'
     | '/traffic'
   fileRoutesById: FileRoutesById
 }
@@ -117,7 +99,6 @@ export interface RootRouteChildren {
   CompanyRoute: typeof CompanyRoute
   InsightsRoute: typeof InsightsRoute
   ResultsRoute: typeof ResultsRoute
-  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TrafficRoute: typeof TrafficRoute
 }
 
@@ -128,13 +109,6 @@ declare module '@tanstack/react-router' {
       path: '/traffic'
       fullPath: '/traffic'
       preLoaderRoute: typeof TrafficRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/results': {
@@ -181,7 +155,6 @@ const rootRouteChildren: RootRouteChildren = {
   CompanyRoute: CompanyRoute,
   InsightsRoute: InsightsRoute,
   ResultsRoute: ResultsRoute,
-  SitemapDotxmlRoute: SitemapDotxmlRoute,
   TrafficRoute: TrafficRoute,
 }
 export const routeTree = rootRouteImport
