@@ -206,9 +206,9 @@
   "home": {
     "hero": {
       "badge": "Your U.S.-Based Marketplace Growth Partner",
-      "titleLine1": "Helping Brands Scale Across",
-      "titleLine2": "Amazon, Walmart & Emerging Commerce Channels",
-      "subtitle": "Smarter Traffic, Scalable Growth.",
+      "title": "Smarter Traffic, Scalable Growth.",
+      "subtitleLine1": "Helping Brands Scale Across",
+      "subtitleLine2": "Amazon, Walmart & Emerging Commerce Channels",
       "ctaInsights": "Explore Marketplace Insights",
       "ctaConsultation": "Schedule a Consultation"
     },

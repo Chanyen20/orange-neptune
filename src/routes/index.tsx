@@ -43,11 +43,13 @@ function Index() {
             <ArrowRight className="h-4 w-4 text-white/80" />
           </div>
           <h1 className="mt-10 text-4xl md:text-6xl font-semibold tracking-tight">
-            {t("home.hero.titleLine1")}
-            <br className="hidden md:block" />
-            {t("home.hero.titleLine2")}
+            {t("home.hero.title")}
           </h1>
-          <p className="mt-6 text-lg md:text-xl text-white/85 max-w-2xl mx-auto">{t("home.hero.subtitle")}</p>
+          <p className="mt-12 text-xl md:text-3xl font-medium text-white/85 max-w-3xl mx-auto">
+            {t("home.hero.subtitleLine1")}
+            <br className="hidden md:block" />
+            {t("home.hero.subtitleLine2")}
+          </p>
           <div className="mt-10 flex flex-wrap justify-center gap-3">
             <Link to="/insights" className="inline-flex items-center gap-2 rounded-full bg-white text-foreground px-6 py-3 text-sm font-medium hover:bg-white/90">
               {t("home.hero.ctaInsights")} <ArrowRight className="h-4 w-4" />

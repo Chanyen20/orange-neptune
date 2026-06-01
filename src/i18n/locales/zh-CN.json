@@ -206,9 +206,9 @@
   "home": {
     "hero": {
       "badge": "您在美国本土的电商增长伙伴",
-      "titleLine1": "助力品牌在美国",
-      "titleLine2": "亚马逊、沃尔玛与新兴渠道规模化增长",
-      "subtitle": "更聪明的流量，可扩展的增长。",
+      "title": "更聪明的流量，可扩展的增长。",
+      "subtitleLine1": "助力品牌在美国",
+      "subtitleLine2": "亚马逊、沃尔玛与新兴渠道规模化增长",
       "ctaInsights": "探索电商洞察",
       "ctaConsultation": "预约咨询"
     },

@@ -48,7 +48,7 @@ export function SiteHeader() {
           </div>
 
           <div className="flex w-fit shrink-0 items-center gap-2">
-            <div className="relative">
+            <div className="relative hidden lg:block">
               <button
                 type="button"
                 aria-label={t("header.selectLanguage")}
@@ -100,7 +100,7 @@ export function SiteHeader() {
 
             <Link
               to="/company"
-              className="inline-flex h-9 items-center rounded-full bg-primary px-4 text-sm font-medium text-primary-foreground hover:opacity-90"
+              className="hidden h-9 items-center rounded-full bg-primary px-4 text-sm font-medium text-primary-foreground hover:opacity-90 lg:inline-flex"
             >
               {t("header.scheduleConsultation")}
             </Link>
@@ -132,6 +132,39 @@ export function SiteHeader() {
                   </li>
                 ))}
               </ul>
+
+              <div className="mt-12">
+                <p className="flex items-center gap-2 px-3 text-xs font-mono uppercase tracking-wider text-muted-foreground">
+                  <Globe className="h-4 w-4" />
+                  {t("header.selectLanguage")}
+                </p>
+                <div className="mt-2 flex flex-col gap-1">
+                  {localeOptions.map((option) => (
+                    <button
+                      key={option.value}
+                      type="button"
+                      onClick={() => {
+                        void selectLocale(option.value);
+                        closeMobileMenu();
+                      }}
+                      className={
+                        "flex h-11 w-full items-center rounded-lg px-3 text-left text-base transition-colors hover:bg-accent " +
+                        (locale === option.value ? "font-medium text-foreground" : "text-muted-foreground")
+                      }
+                    >
+                      {t(option.labelKey)}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <Link
+                to="/company"
+                onClick={closeMobileMenu}
+                className="mt-8 inline-flex h-12 items-center justify-center rounded-full bg-primary px-4 text-base font-medium text-primary-foreground hover:opacity-90"
+              >
+                {t("header.scheduleConsultation")}
+              </Link>
             </nav>
           </div>
         </>
@@ -151,7 +184,7 @@ export function SiteHeader() {
                     "relative inline-flex h-12 items-center gap-1 px-5 text-base font-medium transition-colors " +
                     (openIdx === i
                       ? "text-nav-foreground"
-                      : "text-nav-foreground/80 hover:text-nav-foreground")
+                      : "text-nav-foreground/90 hover:text-nav-foreground")
                   }
                   activeProps={{ className: "relative inline-flex h-12 items-center gap-1 px-5 text-base font-medium text-nav-foreground" }}
                 >
