@@ -1,0 +1,15 @@
+{
+  "name": "orange-neptune-contact-lambda",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Contact form handler — validates the submission and emails the lead via Amazon SES.",
+  "type": "module",
+  "main": "index.mjs",
+  "scripts": {
+    "package": "rm -f function.zip && zip -r function.zip index.mjs node_modules package.json",
+    "deploy": "npm run package && aws lambda update-function-code --region ap-northeast-1 --function-name orange-neptune-contact --zip-file fileb://function.zip"
+  },
+  "dependencies": {
+    "@aws-sdk/client-sesv2": "^3.700.0"
+  }
+}

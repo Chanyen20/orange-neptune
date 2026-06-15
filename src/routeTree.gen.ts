@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as TrafficRouteImport } from './routes/traffic'
 import { Route as ResultsRouteImport } from './routes/results'
 import { Route as InsightsRouteImport } from './routes/insights'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CompanyRouteImport } from './routes/company'
 import { Route as CapabilitiesRouteImport } from './routes/capabilities'
 import { Route as IndexRouteImport } from './routes/index'
@@ -29,6 +30,11 @@ const ResultsRoute = ResultsRouteImport.update({
 const InsightsRoute = InsightsRouteImport.update({
   id: '/insights',
   path: '/insights',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CompanyRoute = CompanyRouteImport.update({
@@ -51,6 +57,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/capabilities': typeof CapabilitiesRoute
   '/company': typeof CompanyRoute
+  '/contact': typeof ContactRoute
   '/insights': typeof InsightsRoute
   '/results': typeof ResultsRoute
   '/traffic': typeof TrafficRoute
@@ -59,6 +66,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/capabilities': typeof CapabilitiesRoute
   '/company': typeof CompanyRoute
+  '/contact': typeof ContactRoute
   '/insights': typeof InsightsRoute
   '/results': typeof ResultsRoute
   '/traffic': typeof TrafficRoute
@@ -68,6 +76,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/capabilities': typeof CapabilitiesRoute
   '/company': typeof CompanyRoute
+  '/contact': typeof ContactRoute
   '/insights': typeof InsightsRoute
   '/results': typeof ResultsRoute
   '/traffic': typeof TrafficRoute
@@ -78,16 +87,25 @@ export interface FileRouteTypes {
     | '/'
     | '/capabilities'
     | '/company'
+    | '/contact'
     | '/insights'
     | '/results'
     | '/traffic'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/capabilities' | '/company' | '/insights' | '/results' | '/traffic'
+  to:
+    | '/'
+    | '/capabilities'
+    | '/company'
+    | '/contact'
+    | '/insights'
+    | '/results'
+    | '/traffic'
   id:
     | '__root__'
     | '/'
     | '/capabilities'
     | '/company'
+    | '/contact'
     | '/insights'
     | '/results'
     | '/traffic'
@@ -97,6 +115,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CapabilitiesRoute: typeof CapabilitiesRoute
   CompanyRoute: typeof CompanyRoute
+  ContactRoute: typeof ContactRoute
   InsightsRoute: typeof InsightsRoute
   ResultsRoute: typeof ResultsRoute
   TrafficRoute: typeof TrafficRoute
@@ -123,6 +142,13 @@ declare module '@tanstack/react-router' {
       path: '/insights'
       fullPath: '/insights'
       preLoaderRoute: typeof InsightsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/company': {
@@ -153,6 +179,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CapabilitiesRoute: CapabilitiesRoute,
   CompanyRoute: CompanyRoute,
+  ContactRoute: ContactRoute,
   InsightsRoute: InsightsRoute,
   ResultsRoute: ResultsRoute,
   TrafficRoute: TrafficRoute,

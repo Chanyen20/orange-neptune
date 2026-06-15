@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Orange Neptune — smarter traffic, scalable growth</title>
+<meta name="description" content="U.S.-based marketplace growth partner. Helping brands scale across Amazon, Walmart and emerging commerce channels." />
+<style>
+  /* =========================================================
+     DESIGN TOKENS
+     ========================================================= */
+  :root {
+    --navy:            #0B2143; /* primary dark sections */
+    --navy-deep:       #081830; /* footer / deepest surface */
+    --blue-bright:     #38BDF8; /* accent — ONLY on dark navy */
+    --blue-mid:        #1763B0; /* CTA band + accents on light */
+    --blue-light-text: #8FD3F7; /* eyebrows on dark navy */
+    --surface-cool:    #EEF3F9; /* cool light sections */
+    --white:           #FFFFFF; /* cards */
+
+    --text-on-dark:  rgba(255, 255, 255, 0.7);
+    --text-on-light: var(--navy);
+
+    --radius-card: 12px;
+    --radius-btn: 8px;
+
+    --maxw: 1120px;
+    --pad-section: 96px;
+
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  /* =========================================================
+     RESET / BASE
+     ========================================================= */
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    color: var(--navy);
+    background: var(--navy);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, p { margin: 0; }
+  a { color: inherit; text-decoration: none; }
+  img, svg { display: block; }
+  ul { margin: 0; padding: 0; list-style: none; }
+
+  .container {
+    width: 100%;
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  /* =========================================================
+     TYPOGRAPHY HELPERS
+     ========================================================= */
+  .eyebrow {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 0 0 16px;
+  }
+  .h2 {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+    line-height: 1.2;
+  }
+  .lead { font-size: 18px; font-weight: 400; }
+
+  /* eyebrow colour by surface */
+  .on-dark .eyebrow  { color: var(--blue-light-text); }
+  .on-light .eyebrow { color: var(--blue-mid); }
+
+  /* heading + body colour by surface */
+  .on-dark  .h2, .on-dark h3  { color: var(--white); }
+  .on-light .h2, .on-light h3 { color: var(--navy); }
+  .on-dark  p { color: var(--text-on-dark); }
+  .on-light p { color: var(--text-on-light); }
+
+  /* =========================================================
+     SECTION SURFACES (alternating rhythm)
+     ========================================================= */
+  .sec { padding-top: var(--pad-section); padding-bottom: var(--pad-section); }
+  .bg-navy    { background: var(--navy); }
+  .bg-cool    { background: var(--surface-cool); }
+  .bg-bluemid { background: var(--blue-mid); }
+  .bg-deep    { background: var(--navy-deep); }
+
+  /* =========================================================
+     BUTTONS
+     ========================================================= */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 46px;
+    padding: 0 22px;
+    border-radius: var(--radius-btn);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: background-color .15s ease, color .15s ease, border-color .15s ease;
+    white-space: nowrap;
+  }
+  /* primary: bright blue on dark navy, dark text for contrast */
+  .btn-bright { background: var(--blue-bright); color: var(--navy); }
+  .btn-bright:hover { background: #5ECBFA; }
+  /* secondary: transparent with white outline (on dark) */
+  .btn-ghost { background: transparent; color: var(--white); border-color: rgba(255,255,255,0.4); }
+  .btn-ghost:hover { border-color: var(--white); background: rgba(255,255,255,0.08); }
+  /* white button for the mid-blue CTA band */
+  .btn-white { background: var(--white); color: var(--blue-mid); }
+  .btn-white:hover { background: #E8F1FB; }
+
+  /* =========================================================
+     NAV
+     ========================================================= */
+  .nav {
+    position: sticky; top: 0; z-index: 50;
+    background: var(--navy);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+
+  .brand { display: inline-flex; align-items: center; gap: 10px; }
+  .brand-mark {
+    width: 30px; height: 30px;
+    border-radius: 8px;
+    background: var(--blue-bright);
+    color: var(--navy);
+    display: inline-flex; align-items: center; justify-content: center;
+    font-weight: 600; font-size: 17px;
+  }
+  .brand-name { color: var(--white); font-weight: 600; font-size: 16px; }
+
+  .nav-links { display: flex; align-items: center; gap: 28px; }
+  .nav-links a { color: rgba(255,255,255,0.75); font-size: 15px; }
+  .nav-links a:hover { color: var(--white); }
+
+  .nav-right { display: flex; align-items: center; gap: 24px; }
+
+  .nav-toggle {
+    display: none;
+    background: transparent; border: 0; cursor: pointer; padding: 8px;
+    color: var(--white);
+  }
+  .nav-toggle svg { width: 24px; height: 24px; }
+
+  /* =========================================================
+     HERO
+     ========================================================= */
+  .hero { padding-top: 104px; padding-bottom: 112px; }
+  .hero .eyebrow { color: var(--blue-light-text); }
+  .hero h1 {
+    font-size: 58px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    line-height: 1.05;
+    color: var(--white);
+    max-width: 14ch;
+  }
+  .hero h1 .accent { color: var(--blue-bright); }
+  .hero .lead {
+    color: var(--text-on-dark);
+    max-width: 52ch;
+    margin-top: 24px;
+  }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 36px; }
+
+  /* =========================================================
+     CAPABILITIES (cards grid)
+     ========================================================= */
+  .grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 16px;
+    margin-top: 40px;
+  }
+  .card {
+    background: var(--white);
+    border-radius: var(--radius-card);
+    padding: 24px 20px;
+  }
+  .card-icon { color: var(--blue-mid); margin-bottom: 16px; }
+  .card-icon svg { width: 28px; height: 28px; }
+  .card h3 { font-size: 16px; font-weight: 600; line-height: 1.3; }
+
+  /* =========================================================
+     TRAFFIC FRAMEWORK (connected steps)
+     ========================================================= */
+  .framework {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+  }
+  /* horizontal connector line through the centre of the number circles */
+  .framework::before {
+    content: "";
+    position: absolute;
+    top: 26px;           /* half of the 52px circle */
+    left: 8%;
+    right: 8%;
+    height: 2px;
+    background: rgba(143, 211, 247, 0.3);
+    z-index: 0;
+  }
+  .step { position: relative; z-index: 1; text-align: left; }
+  .step-num {
+    width: 52px; height: 52px;
+    border-radius: 50%;
+    background: var(--blue-bright);
+    color: var(--navy);
+    font-weight: 600; font-size: 16px;
+    display: inline-flex; align-items: center; justify-content: center;
+    margin-bottom: 20px;
+  }
+  .step h3 { font-size: 17px; font-weight: 600; color: var(--white); }
+  .step p  { font-size: 14px; color: var(--text-on-dark); margin-top: 6px; }
+
+  /* =========================================================
+     RESULTS (big-number cards)
+     ========================================================= */
+  .grid-results {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 40px;
+  }
+  .result {
+    background: var(--white);
+    border-radius: var(--radius-card);
+    padding: 32px 28px;
+  }
+  .result .num { font-size: 46px; font-weight: 600; letter-spacing: -1px; color: var(--blue-mid); line-height: 1; }
+  .result .note { font-size: 12px; color: #6B7A90; margin-top: 8px; }
+  .result .desc { font-size: 16px; color: var(--navy); margin-top: 16px; }
+  .result .tag {
+    display: inline-block;
+    font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;
+    color: var(--blue-mid);
+    margin-top: 16px;
+  }
+
+  /* =========================================================
+     CTA BAND
+     ========================================================= */
+  .cta { text-align: center; }
+  .cta h2 { color: var(--white); max-width: 20ch; margin: 0 auto; }
+  .cta p { color: rgba(255,255,255,0.85); max-width: 48ch; margin: 18px auto 0; }
+  .cta .btn { margin-top: 32px; }
+
+  /* =========================================================
+     FOOTER
+     ========================================================= */
+  .footer-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    padding-top: 36px; padding-bottom: 36px;
+    gap: 20px; flex-wrap: wrap;
+  }
+  .footer-copy { color: rgba(255,255,255,0.55); font-size: 14px; }
+
+  /* =========================================================
+     RESPONSIVE
+     ========================================================= */
+  @media (max-width: 860px) {
+    :root { --pad-section: 64px; }
+    .hero { padding-top: 72px; padding-bottom: 80px; }
+    .hero h1 { font-size: 40px; letter-spacing: -0.5px; }
+
+    /* collapse nav into a toggled menu */
+    .nav-toggle { display: inline-flex; }
+    .nav-right { gap: 0; }
+    .nav-menu {
+      display: none;
+      position: absolute; left: 0; right: 0; top: 64px;
+      background: var(--navy);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      flex-direction: column; align-items: stretch;
+      gap: 0; padding: 8px 24px 20px;
+    }
+    .nav-menu.open { display: flex; }
+    .nav-menu .nav-links { flex-direction: column; align-items: stretch; gap: 0; }
+    .nav-menu .nav-links a { padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .nav-menu .btn { margin-top: 16px; width: 100%; }
+
+    /* framework -> two columns, drop the connector line */
+    .framework { grid-template-columns: repeat(2, 1fr); gap: 32px 24px; }
+    .framework::before { display: none; }
+
+    /* results stack */
+    .grid-results { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 460px) {
+    .framework { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- ===================== NAV (navy) ===================== -->
+  <nav class="nav" aria-label="Primary">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="Orange Neptune home">
+        <span class="brand-mark" aria-hidden="true">O</span>
+        <span class="brand-name">Orange Neptune</span>
+      </a>
+
+      <div class="nav-right">
+        <!-- desktop + collapsible menu -->
+        <div class="nav-menu" id="navMenu">
+          <ul class="nav-links">
+            <!-- EDIT: nav items -->
+            <li><a href="#capabilities">Capabilities</a></li>
+            <li><a href="#traffic">Traffic</a></li>
+            <li><a href="#results">Results</a></li>
+          </ul>
+          <a class="btn btn-bright" href="#cta">Schedule a call</a>
+        </div>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <line x1="4" y1="7" x2="20" y2="7" /><line x1="4" y1="12" x2="20" y2="12" /><line x1="4" y1="17" x2="20" y2="17" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO (navy) ===================== -->
+  <header id="top" class="sec hero bg-navy on-dark">
+    <div class="container">
+      <!-- EDIT: hero copy -->
+      <p class="eyebrow">U.S.-based marketplace growth partner</p>
+      <h1>Smarter traffic, <span class="accent">scalable</span> growth.</h1>
+      <p class="lead">Helping brands scale across Amazon, Walmart and emerging commerce channels.</p>
+      <div class="hero-actions">
+        <a class="btn btn-bright" href="#cta">Schedule a call</a>
+        <a class="btn btn-ghost" href="#capabilities">See our capabilities</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== CAPABILITIES (light) ===================== -->
+  <section id="capabilities" class="sec bg-cool on-light">
+    <div class="container">
+      <p class="eyebrow">Capabilities</p>
+      <h2 class="h2">A structural understanding of marketplace growth</h2>
+
+      <!-- EDIT: six capabilities (icon + name) -->
+      <div class="grid-cards">
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+          </div>
+          <h3>Consumer positioning</h3>
+        </article>
+
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M3 4h2l2.4 12.2a1 1 0 0 0 1 .8h8.2a1 1 0 0 0 1-.8L20 8H6"/></svg>
+          </div>
+          <h3>Amazon advertising</h3>
+        </article>
+
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9l1.2-4h13.6L20 9"/><path d="M4 9a2 2 0 0 0 4 0 2 2 0 0 0 4 0 2 2 0 0 0 4 0 2 2 0 0 0 4 0"/><path d="M5 9v10h14V9"/><path d="M10 19v-5h4v5"/></svg>
+          </div>
+          <h3>Walmart advertising</h3>
+        </article>
+
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="6" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.2 10.8l7.6-3.6M8.2 13.2l7.6 3.6"/></svg>
+          </div>
+          <h3>Social commerce</h3>
+        </article>
+
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l6.5 16 2.3-6.7L19.5 11 4 4z"/></svg>
+          </div>
+          <h3>Google &amp; Meta ads</h3>
+        </article>
+
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v8H3z"/><path d="M14 10h4l3 3v2h-7"/><circle cx="7" cy="17" r="1.6"/><circle cx="17" cy="17" r="1.6"/></svg>
+          </div>
+          <h3>Fulfillment efficiency</h3>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TRAFFIC FRAMEWORK (navy) ===================== -->
+  <section id="traffic" class="sec bg-navy on-dark">
+    <div class="container">
+      <p class="eyebrow">Traffic</p>
+      <h2 class="h2">Four building blocks of scalable traffic</h2>
+
+      <!-- EDIT: four framework steps -->
+      <div class="framework">
+        <article class="step">
+          <span class="step-num" aria-hidden="true">01</span>
+          <h3>Know your consumers</h3>
+          <p>Consumer intelligence</p>
+        </article>
+        <article class="step">
+          <span class="step-num" aria-hidden="true">02</span>
+          <h3>Customize product</h3>
+          <p>Product positioning</p>
+        </article>
+        <article class="step">
+          <span class="step-num" aria-hidden="true">03</span>
+          <h3>Target right audience</h3>
+          <p>Traffic acquisition</p>
+        </article>
+        <article class="step">
+          <span class="step-num" aria-hidden="true">04</span>
+          <h3>Improve efficiency</h3>
+          <p>AI-powered ads</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== RESULTS (light) ===================== -->
+  <section id="results" class="sec bg-cool on-light">
+    <div class="container">
+      <p class="eyebrow">Results</p>
+      <h2 class="h2">How growth actually happens</h2>
+
+      <!-- EDIT: three result cards. Numbers are placeholders. -->
+      <div class="grid-results">
+        <article class="result">
+          <div class="num">+186%</div>
+          <p class="note">示意數字，待換為真實成效</p>
+          <p class="desc">Marketplace revenue growth after repositioning for U.S. shoppers.</p>
+          <span class="tag">Case study</span>
+        </article>
+        <article class="result">
+          <div class="num">3.1x</div>
+          <p class="note">示意數字，待換為真實成效</p>
+          <p class="desc">Return on ad spend lift across a restructured Amazon catalog.</p>
+          <span class="tag">Case study</span>
+        </article>
+        <article class="result">
+          <div class="num">62%</div>
+          <p class="note">示意數字，待換為真實成效</p>
+          <p class="desc">Lower fulfillment cost per unit through channel-aware logistics.</p>
+          <span class="tag">Case study</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA (mid blue) ===================== -->
+  <section id="cta" class="sec cta bg-bluemid">
+    <div class="container">
+      <!-- EDIT: CTA copy -->
+      <h2 class="h2">Discuss growth opportunities with our team</h2>
+      <p>Tell us where you want to grow and we'll map the structural moves to get there.</p>
+      <a class="btn btn-white" href="#top">Schedule a call</a>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER (deepest navy) ===================== -->
+  <footer class="bg-deep">
+    <div class="container footer-inner">
+      <a class="brand" href="#top" aria-label="Orange Neptune home">
+        <span class="brand-mark" aria-hidden="true">O</span>
+        <span class="brand-name">Orange Neptune</span>
+      </a>
+      <!-- EDIT: footer copyright -->
+      <p class="footer-copy">© 2026 · U.S.-based marketplace intelligence</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle (minimal, native).
+    var toggle = document.getElementById('navToggle');
+    var menu = document.getElementById('navMenu');
+    toggle.addEventListener('click', function () {
+      var open = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+    // Close the menu after tapping a link.
+    menu.addEventListener('click', function (e) {
+      if (e.target.closest('a')) {
+        menu.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open menu');
+      }
+    });
+  </script>
+</body>
+</html>

@@ -54,7 +54,7 @@ function Index() {
             <Link to="/insights" className="inline-flex items-center gap-2 rounded-full bg-white text-foreground px-6 py-3 text-sm font-medium hover:bg-white/90">
               {t("home.hero.ctaInsights")} <ArrowRight className="h-4 w-4" />
             </Link>
-            <Link to="/company" className="inline-flex items-center gap-2 rounded-full bg-white/10 ring-1 ring-white/25 text-white px-6 py-3 text-sm font-medium hover:bg-white/15">
+            <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-white/10 ring-1 ring-white/25 text-white px-6 py-3 text-sm font-medium hover:bg-white/15">
               {t("home.hero.ctaConsultation")}
             </Link>
           </div>
@@ -128,7 +128,7 @@ function Index() {
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">{t("home.cta.title")}</h2>
           <p className="mt-4 text-muted-foreground max-w-xl mx-auto">{t("home.cta.description")}</p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <Link to="/company" className="inline-flex h-11 items-center rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground hover:opacity-90">
+            <Link to="/contact" className="inline-flex h-11 items-center rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground hover:opacity-90">
               {t("home.cta.schedule")}
             </Link>
             <Link to="/insights" className="inline-flex h-11 items-center rounded-full border border-border px-6 text-sm font-medium hover:bg-accent">

@@ -48,6 +48,12 @@
       "description": "了解我们的起点、认识团队、阅读原则，并探讨增长机会。",
       "ogTitle": "公司 — Orange Neptune",
       "ogDescription": "Orange Neptune 背后的团队与原则。"
+    },
+    "contact": {
+      "title": "预约咨询 — Orange Neptune",
+      "description": "告诉我们您的品牌与电商增长目标，我们将在一个工作日内回覆，为您安排咨询。",
+      "ogTitle": "预约咨询 — Orange Neptune",
+      "ogDescription": "与我们的团队探讨电商增长机会。"
     }
   },
   "header": {
@@ -379,6 +385,40 @@
         "team": { "title": "团队", "desc": "Orange Neptune 背后的团队。" },
         "principles": { "title": "原则", "desc": "我们的理念与哲学。" },
         "contact": { "title": "联系", "desc": "与团队探讨增长机会。" }
+      }
+    },
+    "contact": {
+      "heroEyebrow": "联系",
+      "heroTitle": "聊聊您的电商增长。",
+      "heroSubtitle": "告诉我们您的品牌，以及您希望在哪些方面增长。我们将在一个工作日内回覆您。",
+      "email": "hello@orangeneptune.com",
+      "subjectLine": "咨询预约",
+      "intro": {
+        "eyebrow": "与我们联系",
+        "title": "我们会有专员亲自与您联系。",
+        "body": "留下基本资料，我们的电商增长专员将在一个工作日内与您联系，安排进一步沟通。没有自动化的销售流程——直接对接真正负责您业务增长的团队。",
+        "emailLabel": "更习惯用邮件？",
+        "responseLabel": "回覆时间",
+        "responseValue": "一个工作日内"
+      },
+      "form": {
+        "title": "告诉我们您的品牌",
+        "name": "姓名",
+        "namePlaceholder": "您的姓名",
+        "company": "公司",
+        "companyPlaceholder": "公司名称",
+        "email": "商务邮箱",
+        "emailPlaceholder": "you@company.com",
+        "phone": "电话（选填）",
+        "phonePlaceholder": "请包含国码，例如 +886",
+        "message": "我们能为您做些什么？",
+        "messagePlaceholder": "简单介绍您的品牌、目前销售的电商平台，以及您想要增长的方向。",
+        "optional": "选填",
+        "submit": "送出讯息",
+        "sending": "传送中…",
+        "success": "感谢您的来信，我们的专员将在一个工作日内与您联系。",
+        "error": "讯息暂时无法送出。您可以再试一次，或改用邮件寄送——我们已经帮您把内容拟好了。",
+        "emailFallback": "改用邮件寄送"
       }
     }
   },

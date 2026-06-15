@@ -22,6 +22,9 @@ dist-ssr
 .wrangler/
 .dev.vars
 
+# Lambda build artifacts
+infra/contact-lambda/function.zip
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

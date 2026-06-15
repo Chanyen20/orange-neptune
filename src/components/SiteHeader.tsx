@@ -99,7 +99,7 @@ export function SiteHeader() {
             </button>
 
             <Link
-              to="/company"
+              to="/contact"
               className="hidden h-9 items-center rounded-full bg-primary px-4 text-sm font-medium text-primary-foreground hover:opacity-90 lg:inline-flex"
             >
               {t("header.scheduleConsultation")}
@@ -159,7 +159,7 @@ export function SiteHeader() {
               </div>
 
               <Link
-                to="/company"
+                to="/contact"
                 onClick={closeMobileMenu}
                 className="mt-8 inline-flex h-12 items-center justify-center rounded-full bg-primary px-4 text-base font-medium text-primary-foreground hover:opacity-90"
               >

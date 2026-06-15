@@ -7,7 +7,8 @@ export type PageMetaKey =
   | "traffic"
   | "results"
   | "insights"
-  | "company";
+  | "company"
+  | "contact";
 
 const PATH_META: Record<string, PageMetaKey> = {
   "/": "home",
@@ -16,6 +17,7 @@ const PATH_META: Record<string, PageMetaKey> = {
   "/results": "results",
   "/insights": "insights",
   "/company": "company",
+  "/contact": "contact",
 };
 
 export function pathnameToMetaKey(pathname: string): PageMetaKey {

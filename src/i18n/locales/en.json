@@ -48,6 +48,12 @@
       "description": "Learn how we started, meet the team, read our principles, and discuss growth opportunities.",
       "ogTitle": "Company — Orange Neptune",
       "ogDescription": "The team and principles behind Orange Neptune."
+    },
+    "contact": {
+      "title": "Schedule a Consultation — Orange Neptune",
+      "description": "Tell us about your brand and marketplace goals. We'll reply within one business day to set up a consultation.",
+      "ogTitle": "Schedule a Consultation — Orange Neptune",
+      "ogDescription": "Discuss marketplace growth opportunities with our team."
     }
   },
   "header": {
@@ -379,6 +385,40 @@
         "team": { "title": "Team", "desc": "The team behind Orange Neptune." },
         "principles": { "title": "Principles", "desc": "Our philosophies." },
         "contact": { "title": "Contact", "desc": "Discuss growth opportunities with our team." }
+      }
+    },
+    "contact": {
+      "heroEyebrow": "Contact",
+      "heroTitle": "Let's talk about your marketplace growth.",
+      "heroSubtitle": "Tell us about your brand and where you want to grow. We'll get back to you within one business day.",
+      "email": "hello@orangeneptune.com",
+      "subjectLine": "Consultation request",
+      "intro": {
+        "eyebrow": "Get in touch",
+        "title": "A specialist will reach out personally.",
+        "body": "Share a few details and one of our marketplace specialists will get back to you within one business day to set up a conversation. No automated funnels — just a direct line to the people who'll be working on your growth.",
+        "emailLabel": "Prefer email?",
+        "responseLabel": "Response time",
+        "responseValue": "Within one business day"
+      },
+      "form": {
+        "title": "Tell us about your brand",
+        "name": "Name",
+        "namePlaceholder": "Your full name",
+        "company": "Company",
+        "companyPlaceholder": "Company name",
+        "email": "Business email",
+        "emailPlaceholder": "you@company.com",
+        "phone": "Phone (optional)",
+        "phonePlaceholder": "Include country code, e.g. +1",
+        "message": "How can we help?",
+        "messagePlaceholder": "A short note about your brand, the marketplaces you sell on, and what you're trying to grow.",
+        "optional": "Optional",
+        "submit": "Send message",
+        "sending": "Sending…",
+        "success": "Thanks for reaching out. A specialist will be in touch within one business day.",
+        "error": "We couldn't send your message just now. You can try again, or send it as an email — we've already filled it in for you.",
+        "emailFallback": "Send as email instead"
       }
     }
   },
