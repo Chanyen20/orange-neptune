@@ -353,6 +353,9 @@
       "heroTitle": "以专业方法发布的电商情报。",
       "heroSubtitle": "关于决定电商增长能否复利的关键结构性问题的深度思考。",
       "article": "文章",
+      "readingTime": "阅读约 {{minutes}} 分钟",
+      "backToList": "返回所有洞察",
+      "empty": "暂无已发布的文章。",
       "items": {
         "positioning": {
           "title": "为何许多品牌在美国电商定位上举步维艰",

@@ -1,6 +1,11 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { PageShell, PageHero } from "@/components/PageShell";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { PageShell } from "@/components/PageShell";
+import { GradientBlob } from "@/components/decor";
 import { buildPageHead } from "@/i18n/head";
+import { getCurrentLocale } from "@/i18n";
+import { formatArticleDate } from "@/lib/format-date";
+import { getArticles } from "@/content/articles";
+import { ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 export const Route = createFileRoute("/insights")({
@@ -8,29 +13,62 @@ export const Route = createFileRoute("/insights")({
   component: InsightsPage,
 });
 
-const insightKeys = ["positioning", "trafficQuality", "walmart", "localization", "perception"] as const;
-
 function InsightsPage() {
   const { t } = useTranslation();
+  const locale = getCurrentLocale();
+  const articles = getArticles(locale);
 
   return (
     <PageShell>
-      <PageHero
-        eyebrow={t("pages.insights.heroEyebrow")}
-        title={t("pages.insights.heroTitle")}
-        subtitle={t("pages.insights.heroSubtitle")}
-      />
-      <section className="flex min-h-[90vh] flex-col justify-center py-12 md:min-h-screen md:py-16">
-        <div className="mx-auto w-full max-w-5xl px-6">
-          <ul className="divide-y divide-border">
-          {insightKeys.map((key) => (
-            <li key={key} className="py-8 first:pt-0 last:pb-0">
-              <span className="text-xs font-mono text-primary">{t("pages.insights.article")}</span>
-              <h3 className="mt-2 text-2xl font-semibold leading-snug">{t(`pages.insights.items.${key}.title`)}</h3>
-              <p className="mt-2 text-muted-foreground">{t(`pages.insights.items.${key}.desc`)}</p>
-            </li>
-          ))}
-          </ul>
+      <section className="relative overflow-hidden py-12 md:py-16">
+        <GradientBlob className="-right-24 top-0 h-[360px] w-[360px] bg-primary/10" />
+        <div className="relative mx-auto w-full max-w-6xl px-6">
+          {articles.length === 0 ? (
+            <p className="text-center text-muted-foreground">{t("pages.insights.empty")}</p>
+          ) : (
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {articles.map((article) => (
+                <Link
+                  key={article.slug}
+                  to="/insights/$slug"
+                  params={{ slug: article.slug }}
+                  className="group flex flex-col overflow-hidden rounded-2xl border border-border transition-colors hover:border-primary/40"
+                >
+                  {article.cover && (
+                    <div className="relative aspect-[16/10] overflow-hidden">
+                      <img
+                        src={article.cover}
+                        alt=""
+                        aria-hidden
+                        loading="lazy"
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-foreground/5 to-transparent" />
+                      <span className="absolute left-4 top-4 inline-flex items-center rounded-full bg-background/90 px-3 py-1 text-xs font-mono text-primary backdrop-blur">
+                        {t("pages.insights.article")}
+                      </span>
+                    </div>
+                  )}
+                  <div className="flex flex-1 flex-col p-6">
+                    <h3 className="text-lg font-semibold leading-snug transition-colors group-hover:text-primary">
+                      {article.title}
+                    </h3>
+                    <p className="mt-3 line-clamp-3 text-sm text-muted-foreground">
+                      {article.description}
+                    </p>
+                    <div className="mt-5 flex items-center gap-3 text-xs text-muted-foreground">
+                      {article.date && <span>{formatArticleDate(article.date, locale)}</span>}
+                      {article.date && <span aria-hidden>·</span>}
+                      <span>
+                        {t("pages.insights.readingTime", { minutes: article.readingMinutes })}
+                      </span>
+                      <ArrowRight className="ml-auto h-4 w-4 text-primary transition-transform group-hover:translate-x-1" />
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
       </section>
     </PageShell>

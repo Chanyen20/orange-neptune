@@ -1,0 +1,167 @@
+# Sveltia CMS configuration.
+#
+# Content is stored as files in this GitHub repo (no database). The CMS commits
+# changes to the `main` branch; a GitHub Action then rebuilds and deploys to S3.
+#
+# IMPORTANT: replace `base_url` below with your deployed Cloudflare Worker URL
+# (the OAuth login helper). See infra/cms-setup.md for the one-time setup.
+
+backend:
+  name: github
+  repo: Chanyen20/orange-neptune
+  branch: main
+  base_url: https://REPLACE-WITH-YOUR-WORKER.workers.dev
+
+# Where uploaded images are stored / referenced from.
+media_folder: public/images/articles
+public_folder: /images/articles
+
+# Bilingual content. Article files live under content/articles/<locale>/<slug>.md.
+i18n:
+  structure: multiple_folders
+  locales: [en, zh-CN]
+  default_locale: en
+
+collections:
+  # ---- Articles (the /insights blog) ----------------------------------------
+  - name: articles
+    label: Articles
+    label_singular: Article
+    description: Insights articles shown on the /insights page.
+    folder: content/articles
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    summary: "{{fields.title}}"
+    sortable_fields: [date, title]
+    i18n: true
+    fields:
+      - { label: Title, name: title, widget: string, i18n: true }
+      - { label: Short description, name: description, widget: text, i18n: true }
+      - {
+          label: Date,
+          name: date,
+          widget: datetime,
+          date_format: "YYYY-MM-DD",
+          time_format: false,
+          i18n: duplicate,
+        }
+      - {
+          label: Cover image,
+          name: cover,
+          widget: image,
+          required: false,
+          i18n: duplicate,
+        }
+      - {
+          label: Draft (hidden from site),
+          name: draft,
+          widget: boolean,
+          default: false,
+          i18n: duplicate,
+        }
+      - { label: Body, name: body, widget: markdown, i18n: true }
+
+  # ---- Editable site text ----------------------------------------------------
+  # Each file is fully owned by the CMS, so editing is safe (no data loss).
+  - name: site
+    label: Site text
+    description: Headlines and marketing copy across the site.
+    files:
+      - name: site_en
+        label: Site text (English)
+        file: content/site/en.json
+        fields:
+          - label: Home page
+            name: home
+            widget: object
+            fields:
+              - { label: Hero badge, name: heroBadge, widget: string }
+              - { label: Hero title, name: heroTitle, widget: text }
+              - { label: Hero subtitle — line 1, name: heroSubtitleLine1, widget: string }
+              - { label: Hero subtitle — line 2, name: heroSubtitleLine2, widget: string }
+              - { label: Closing CTA title, name: ctaTitle, widget: string }
+              - { label: Closing CTA description, name: ctaDescription, widget: text }
+          - label: Page headings
+            name: pages
+            widget: object
+            fields:
+              - label: Capabilities
+                name: capabilities
+                widget: object
+                fields:
+                  - { label: Title, name: heroTitle, widget: text }
+                  - { label: Subtitle, name: heroSubtitle, widget: text }
+              - label: Traffic
+                name: traffic
+                widget: object
+                fields:
+                  - { label: Title, name: heroTitle, widget: text }
+                  - { label: Subtitle, name: heroSubtitle, widget: text }
+              - label: Results
+                name: results
+                widget: object
+                fields:
+                  - { label: Title, name: heroTitle, widget: text }
+                  - { label: Subtitle, name: heroSubtitle, widget: text }
+              - label: Company
+                name: company
+                widget: object
+                fields:
+                  - { label: Title, name: heroTitle, widget: text }
+                  - { label: Subtitle, name: heroSubtitle, widget: text }
+              - label: Contact
+                name: contact
+                widget: object
+                fields:
+                  - { label: Title, name: heroTitle, widget: text }
+                  - { label: Subtitle, name: heroSubtitle, widget: text }
+
+      - name: site_zh
+        label: 网站文字（中文）
+        file: content/site/zh-CN.json
+        fields:
+          - label: 首页
+            name: home
+            widget: object
+            fields:
+              - { label: 顶部标签, name: heroBadge, widget: string }
+              - { label: 主标题, name: heroTitle, widget: text }
+              - { label: 副标题 — 第 1 行, name: heroSubtitleLine1, widget: string }
+              - { label: 副标题 — 第 2 行, name: heroSubtitleLine2, widget: string }
+              - { label: 结尾 CTA 标题, name: ctaTitle, widget: string }
+              - { label: 结尾 CTA 描述, name: ctaDescription, widget: text }
+          - label: 各页标题
+            name: pages
+            widget: object
+            fields:
+              - label: Capabilities
+                name: capabilities
+                widget: object
+                fields:
+                  - { label: 标题, name: heroTitle, widget: text }
+                  - { label: 副标题, name: heroSubtitle, widget: text }
+              - label: Traffic
+                name: traffic
+                widget: object
+                fields:
+                  - { label: 标题, name: heroTitle, widget: text }
+                  - { label: 副标题, name: heroSubtitle, widget: text }
+              - label: Results
+                name: results
+                widget: object
+                fields:
+                  - { label: 标题, name: heroTitle, widget: text }
+                  - { label: 副标题, name: heroSubtitle, widget: text }
+              - label: Company
+                name: company
+                widget: object
+                fields:
+                  - { label: 标题, name: heroTitle, widget: text }
+                  - { label: 副标题, name: heroSubtitle, widget: text }
+              - label: Contact
+                name: contact
+                widget: object
+                fields:
+                  - { label: 标题, name: heroTitle, widget: text }
+                  - { label: 副标题, name: heroSubtitle, widget: text }

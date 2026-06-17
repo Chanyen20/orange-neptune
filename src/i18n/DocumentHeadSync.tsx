@@ -9,6 +9,8 @@ export function DocumentHeadSync() {
   const { i18n } = useTranslation();
 
   useEffect(() => {
+    // Article detail pages manage their own <title>; don't reset it here.
+    if (/^\/insights\/.+/.test(pathname)) return;
     applyDocumentHead(pathnameToMetaKey(pathname));
   }, [pathname, i18n.language]);
 

@@ -4,7 +4,10 @@ import { CheckCircle2, Clock, Mail } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 import { PageShell, PageHero } from "@/components/PageShell";
+import { DotGrid, GradientBlob } from "@/components/decor";
 import { buildPageHead } from "@/i18n/head";
+import { getCurrentLocale } from "@/i18n";
+import { getSiteText } from "@/content/site";
 
 export const Route = createFileRoute("/contact")({
   head: () => buildPageHead("contact"),
@@ -18,13 +21,15 @@ type Status = "idle" | "sending" | "success" | "error";
 
 function ContactPage() {
   const { t } = useTranslation();
+  const site = getSiteText(getCurrentLocale());
   const email = t("pages.contact.email");
 
   const [form, setForm] = useState({ name: "", company: "", email: "", phone: "", message: "" });
   const [status, setStatus] = useState<Status>("idle");
 
-  const update = (field: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
-    setForm((prev) => ({ ...prev, [field]: e.target.value }));
+  const update =
+    (field: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
+      setForm((prev) => ({ ...prev, [field]: e.target.value }));
 
   // Build a pre-filled email from whatever the visitor typed — used as a fallback
   // when the API can't be reached (e.g. an overseas endpoint is blocked in China).
@@ -64,12 +69,14 @@ function ContactPage() {
     <PageShell>
       <PageHero
         eyebrow={t("pages.contact.heroEyebrow")}
-        title={t("pages.contact.heroTitle")}
-        subtitle={t("pages.contact.heroSubtitle")}
+        title={site.pages.contact.heroTitle}
+        subtitle={site.pages.contact.heroSubtitle}
       />
 
-      <section className="py-16 md:py-24">
-        <div className="mx-auto w-full max-w-6xl px-6">
+      <section className="relative overflow-hidden py-16 md:py-24">
+        <GradientBlob className="-right-24 top-0 h-[380px] w-[380px] bg-primary/10" />
+        <DotGrid className="text-primary/[0.04] [mask-image:radial-gradient(60%_50%_at_50%_0%,black,transparent)]" />
+        <div className="relative mx-auto w-full max-w-6xl px-6">
           <div className="grid gap-10 md:grid-cols-2 md:gap-16 lg:gap-20">
             {/* Left — reassurance copy */}
             <div className="md:pt-4">
@@ -79,20 +86,32 @@ function ContactPage() {
               <h2 className="mt-3 text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
                 {t("pages.contact.intro.title")}
               </h2>
-              <p className="mt-5 leading-relaxed text-muted-foreground">{t("pages.contact.intro.body")}</p>
+              <p className="mt-5 leading-relaxed text-muted-foreground">
+                {t("pages.contact.intro.body")}
+              </p>
 
               <dl className="mt-10 space-y-6 border-t border-border pt-8">
                 <div className="flex items-start gap-4">
-                  <Clock className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                  <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-primary/10 text-primary">
+                    <Clock className="h-5 w-5" />
+                  </span>
                   <div>
-                    <dt className="text-sm font-medium text-foreground">{t("pages.contact.intro.responseLabel")}</dt>
-                    <dd className="text-sm text-muted-foreground">{t("pages.contact.intro.responseValue")}</dd>
+                    <dt className="text-sm font-medium text-foreground">
+                      {t("pages.contact.intro.responseLabel")}
+                    </dt>
+                    <dd className="text-sm text-muted-foreground">
+                      {t("pages.contact.intro.responseValue")}
+                    </dd>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <Mail className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                  <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-primary/10 text-primary">
+                    <Mail className="h-5 w-5" />
+                  </span>
                   <div>
-                    <dt className="text-sm font-medium text-foreground">{t("pages.contact.intro.emailLabel")}</dt>
+                    <dt className="text-sm font-medium text-foreground">
+                      {t("pages.contact.intro.emailLabel")}
+                    </dt>
                     <dd>
                       <a
                         href={`mailto:${email}`}
@@ -111,11 +130,15 @@ function ContactPage() {
               {status === "success" ? (
                 <div className="flex flex-col items-center justify-center py-12 text-center">
                   <CheckCircle2 className="h-12 w-12 text-primary" />
-                  <p className="mt-4 max-w-sm leading-relaxed text-foreground">{t("pages.contact.form.success")}</p>
+                  <p className="mt-4 max-w-sm leading-relaxed text-foreground">
+                    {t("pages.contact.form.success")}
+                  </p>
                 </div>
               ) : (
                 <>
-                  <h3 className="text-lg font-semibold text-foreground">{t("pages.contact.form.title")}</h3>
+                  <h3 className="text-lg font-semibold text-foreground">
+                    {t("pages.contact.form.title")}
+                  </h3>
                   <form onSubmit={handleSubmit} className="mt-6 space-y-5">
                     <Field
                       label={t("pages.contact.form.name")}
@@ -151,7 +174,10 @@ function ContactPage() {
                       autoComplete="tel"
                     />
                     <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-foreground">
+                      <label
+                        htmlFor="message"
+                        className="block text-sm font-medium text-foreground"
+                      >
                         {t("pages.contact.form.message")}
                         <span className="ml-1 text-primary">*</span>
                       </label>
@@ -184,7 +210,9 @@ function ContactPage() {
                       disabled={status === "sending"}
                       className="inline-flex h-12 w-full items-center justify-center rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
                     >
-                      {status === "sending" ? t("pages.contact.form.sending") : t("pages.contact.form.submit")}
+                      {status === "sending"
+                        ? t("pages.contact.form.sending")
+                        : t("pages.contact.form.submit")}
                     </button>
                   </form>
                 </>

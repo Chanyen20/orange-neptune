@@ -1,0 +1,32 @@
+{
+  "home": {
+    "heroBadge": "您在美国本土的电商增长伙伴",
+    "heroTitle": "更聪明的流量，可扩展的增长。",
+    "heroSubtitleLine1": "助力品牌在美国",
+    "heroSubtitleLine2": "亚马逊、沃尔玛与新兴渠道规模化增长",
+    "ctaTitle": "与团队探讨增长机会。",
+    "ctaDescription": "冷静、战略、自信。我们与准备好结构性思考电商增长的品牌合作。"
+  },
+  "pages": {
+    "capabilities": {
+      "heroTitle": "结构性理解电商增长。",
+      "heroSubtitle": "我们帮助品牌在亚马逊、沃尔玛与新兴渠道实现复利式增长的专业能力。"
+    },
+    "traffic": {
+      "heroTitle": "可扩展流量的模块化框架。",
+      "heroSubtitle": "四大模块协同运作——单独强大，组合更强。"
+    },
+    "results": {
+      "heroTitle": "增长如何真正发生。",
+      "heroSubtitle": "我们在各品类中反复看到的模式——以及解锁增长的结构化动作。"
+    },
+    "company": {
+      "heroTitle": "冷静、战略型的合作伙伴——刻意为之。",
+      "heroSubtitle": "我们是美国本土的电商增长团队。低调做人，认真做事。"
+    },
+    "contact": {
+      "heroTitle": "聊聊您的电商增长。",
+      "heroSubtitle": "告诉我们您的品牌，以及您希望在哪些方面增长。我们将在一个工作日内回覆您。"
+    }
+  }
+}

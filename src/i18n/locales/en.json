@@ -353,6 +353,9 @@
       "heroTitle": "A marketplace intelligence publication.",
       "heroSubtitle": "Long-form thinking on the structural questions that decide whether marketplace growth compounds.",
       "article": "ARTICLE",
+      "readingTime": "{{minutes}} min read",
+      "backToList": "All insights",
+      "empty": "No articles published yet.",
       "items": {
         "positioning": {
           "title": "Why Many Brands Struggle With U.S. Marketplace Positioning",

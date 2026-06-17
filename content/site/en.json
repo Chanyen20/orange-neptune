@@ -1,0 +1,32 @@
+{
+  "home": {
+    "heroBadge": "Your U.S.-Based Marketplace Growth Partner",
+    "heroTitle": "Smarter Traffic, Scalable Growth.",
+    "heroSubtitleLine1": "Helping Brands Scale Across",
+    "heroSubtitleLine2": "Amazon, Walmart & Emerging Commerce Channels",
+    "ctaTitle": "Discuss growth opportunities with our team.",
+    "ctaDescription": "Calm, strategic, confident. We work with brands ready to think about marketplace growth structurally."
+  },
+  "pages": {
+    "capabilities": {
+      "heroTitle": "Marketplace growth, understood structurally.",
+      "heroSubtitle": "The disciplines we use to help brands compound across Amazon, Walmart, and emerging commerce channels."
+    },
+    "traffic": {
+      "heroTitle": "A modular framework for scalable traffic.",
+      "heroSubtitle": "Four blocks that work together — each strong on its own, stronger as a system."
+    },
+    "results": {
+      "heroTitle": "How growth actually happens.",
+      "heroSubtitle": "Patterns we have seen repeat across categories — and the structural moves that unlock them."
+    },
+    "company": {
+      "heroTitle": "A calm, strategic partner — by design.",
+      "heroSubtitle": "We are a U.S.-based marketplace growth team. Quiet about ourselves, serious about the work."
+    },
+    "contact": {
+      "heroTitle": "Let's talk about your marketplace growth.",
+      "heroSubtitle": "Tell us about your brand and where you want to grow. We'll get back to you within one business day."
+    }
+  }
+}
