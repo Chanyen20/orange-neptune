@@ -10,7 +10,7 @@ backend:
   name: github
   repo: Chanyen20/orange-neptune
   branch: main
-  base_url: https://REPLACE-WITH-YOUR-WORKER.workers.dev
+  base_url: https://sveltia-cms-auth.chanyenhsiung.workers.dev
 
 # Where uploaded images are stored / referenced from.
 media_folder: public/images/articles
