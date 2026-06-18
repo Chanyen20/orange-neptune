@@ -1,5 +1,5 @@
 ---
-title: The Difference Between Traffic Growth and Conversion Quality test
+title: The Difference Between Traffic Growth and Conversion Q
 description: Traffic growth without conversion quality is a balance-sheet liability test.
 date: 2026-05-14
 cover: /images/case-roas.jpg
