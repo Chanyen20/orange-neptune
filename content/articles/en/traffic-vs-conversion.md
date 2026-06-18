@@ -1,12 +1,12 @@
 ---
-title: The Difference Between Traffic Growth and Conversion Quality
-description: Traffic growth without conversion quality is a balance-sheet liability.
+title: The Difference Between Traffic Growth and Conversion Quality test
+description: Traffic growth without conversion quality is a balance-sheet liability test.
 date: 2026-05-14
 cover: /images/case-roas.jpg
 draft: false
 ---
 
-It is easy to buy traffic. It is hard to buy the *right* traffic. The gap between those two sentences is where most marketplace budgets quietly leak.
+It is easy to buy traffic. It is hard to buy the _right_ traffic. The gap between those two sentences is where most marketplace budgets quietly leak.
 
 ## Traffic is a vanity number until it converts
 
