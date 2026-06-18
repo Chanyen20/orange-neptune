@@ -27,7 +27,7 @@ collections:
   - name: articles
     label: Articles
     label_singular: Article
-    description: Insights articles shown on the /insights page.
+    description: "Create and edit insights articles. Each one has an English and a 中文 version — use the language tabs at the top of the editor to fill in both."
     folder: content/articles
     create: true
     delete: true
@@ -36,31 +36,52 @@ collections:
     sortable_fields: [date, title]
     i18n: true
     fields:
-      - { label: Title, name: title, widget: string, i18n: true }
-      - { label: Short description, name: description, widget: text, i18n: true }
       - {
-          label: Date,
+          label: "Title",
+          name: title,
+          widget: string,
+          i18n: true,
+          hint: "Shown on the article card and as the page heading. Fill in both English and 中文 using the language tabs above.",
+        }
+      - {
+          label: "Short description",
+          name: description,
+          widget: text,
+          i18n: true,
+          hint: "One-line summary shown on the /insights card.",
+        }
+      - {
+          label: "Date",
           name: date,
           widget: datetime,
           date_format: "YYYY-MM-DD",
           time_format: false,
           i18n: duplicate,
+          hint: "Sorts articles newest-first. Shared by both languages.",
         }
       - {
-          label: Cover image,
+          label: "Cover image",
           name: cover,
           widget: image,
           required: false,
           i18n: duplicate,
+          hint: "The picture on the card and article header. Click to upload or choose one — about 1600×900 looks best.",
         }
       - {
-          label: Draft (hidden from site),
+          label: "Draft — hide from website",
           name: draft,
           widget: boolean,
           default: false,
           i18n: duplicate,
+          hint: "Turn ON while writing to keep it off the live site. Turn OFF to publish.",
         }
-      - { label: Body, name: body, widget: markdown, i18n: true }
+      - {
+          label: "Body",
+          name: body,
+          widget: markdown,
+          i18n: true,
+          hint: "The article content. Use the toolbar for headings, lists and quotes — and the image button to insert pictures.",
+        }
 
   # ---- Editable site text ----------------------------------------------------
   # Each file is fully owned by the CMS, so editing is safe (no data loss).
