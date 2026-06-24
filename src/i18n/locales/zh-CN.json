@@ -356,6 +356,8 @@
       "readingTime": "阅读约 {{minutes}} 分钟",
       "backToList": "返回所有洞察",
       "empty": "暂无已发布的文章。",
+      "prevArticle": "上一篇",
+      "nextArticle": "下一篇",
       "items": {
         "positioning": {
           "title": "为何许多品牌在美国电商定位上举步维艰",

@@ -356,6 +356,8 @@
       "readingTime": "{{minutes}} min read",
       "backToList": "All insights",
       "empty": "No articles published yet.",
+      "prevArticle": "Previous",
+      "nextArticle": "Next",
       "items": {
         "positioning": {
           "title": "Why Many Brands Struggle With U.S. Marketplace Positioning",

@@ -97,6 +97,20 @@ export function getArticle(locale: AppLocale, slug: string): Article | undefined
   return resolve(locale, slug);
 }
 
+/**
+ * Neighbours of an article in the newest-first list:
+ * `prev` is the newer article (above it), `next` is the older one (below it).
+ */
+export function getAdjacentArticles(
+  locale: AppLocale,
+  slug: string,
+): { prev?: Article; next?: Article } {
+  const list = getArticles(locale);
+  const i = list.findIndex((a) => a.slug === slug);
+  if (i === -1) return {};
+  return { prev: list[i - 1], next: list[i + 1] };
+}
+
 /** Every slug that should be prerendered (union across locales). */
 export function getArticleSlugs(): string[] {
   return allSlugs();
