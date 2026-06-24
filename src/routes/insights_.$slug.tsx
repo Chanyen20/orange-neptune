@@ -9,7 +9,7 @@ import { getArticle } from "@/content/articles";
 import { getCurrentLocale } from "@/i18n";
 import { formatArticleDate } from "@/lib/format-date";
 
-export const Route = createFileRoute("/insights/$slug")({
+export const Route = createFileRoute("/insights_/$slug")({
   head: ({ params }) => {
     const article = getArticle(getCurrentLocale(), params.slug);
     if (!article) return {};
